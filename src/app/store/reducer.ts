@@ -25,6 +25,11 @@ export function ShopReducer(state = initialState, action: ActionsUnion) {
         ...state,
         cart: [...state.cart.filter(item => item.name !== action.payload.name)]
       };
+    case ActionTypes.EmptyCart:
+      return {
+        ...state,
+        cart:[]
+      };
 
     default:
       return state;

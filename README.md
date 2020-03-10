@@ -1,5 +1,6 @@
-# Fruit store
+# Merchandise store
 State management in anuglar applications using ngrx/store
+Code modified from https://github.com/HackAfro/reactive-fruit-store
 
 ## Prerequisites
 - [Angular](https://angular.io)

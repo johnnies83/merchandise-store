@@ -1,0 +1,23 @@
+<h3 class="m-3">Shopping Cart
+  <div class="float-right">
+    <button type="button" *ngIf="cart.length > 0"  class="btn btn-primary" [routerLink]="['/receipt']">Purchase</button>
+  </div>
+</h3>
+<table class="table table-striped" *ngIf="cart.length > 0"> 
+  <thead>
+    <tr>
+      <th scope="col">Quantity</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cart">
+      <td>1</td>
+      <td >{{item.name}}</td>
+      <td >{{item.description}}</td>
+      <td >${{item.price}}</td>
+    </tr>
+  </tbody>
+</table>

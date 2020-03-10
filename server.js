@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 4000;
-const fruits = require('./fruits');
+const merchandise = require('./merchandise');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,8 +16,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/fruits', (req, res) => {
-  res.json(fruits);
+app.get('/merchandise', (req, res) => {
+  res.json(merchandise);
 });
 
 app.listen(port, () => {

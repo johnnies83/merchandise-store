@@ -1,0 +1,8 @@
+<h4 class = "d-flex justify-content-center">THANK YOU FOR YOUR PURCHASE</h4>
+<div class="border d-flex justify-content-center">
+  <ul  style="list-style-type:none;">
+    <li *ngFor="let item of receipt" >{{item.quantity}} {{item.description}}: {{item.taxprice}}</li>
+    <li >Sales Tax: {{totalsalestaxstr}}</li>
+    <li>Total: {{grandtotalstr}}</li>
+  </ul>
+</div>
